@@ -1,7 +1,7 @@
 # ST-CCN-AQI
 
 Parameter Tuning
-=
+-
 
 After the above experiments, data selection and data set division have been completed.Next, the hyperparameters of ST-CCN-IAQI model were optimized to improve the prediction accuracy of the model.In the iterative process, the learning rate will control the progress of learning, that is, the step of forward and the speed of gradient descent, thus affecting the prediction effect of the model.In this paper, the learning rate values are set as 0.1, 0.005, 0.001, 0.0005 and 0.0001 for comparative experiments. The experimental results are shown in Table 5:
 
