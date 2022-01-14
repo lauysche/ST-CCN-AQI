@@ -6,9 +6,9 @@ With the rapid development of science and technology, air quality is being serio
 <div align=center>
 <img src="https://github.com/lauysche/ST-CCN-AQI/blob/main/images/github1.png"/>
 </div>
-
+<div align=center>
 Figure 4: Distribution of monitoring stations in Shanghai
-
+</div>
 In this paper, hourly air quality data sets were collected from 9 monitoring stations in Shanghai from August 26 to September 28, 2013, including IAQIPM2.5, IAQIPM10, IAQINO2, temperature, pressure, humidity, wind speed and weather.Geographic location information, including longitude and latitude, was obtained for 9 monitoring stations in Shanghai. The data description is Table 1:
 
 ![image](https://github.com/lauysche/ST-CCN-AQI/blob/main/images/github2.png)
