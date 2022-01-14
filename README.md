@@ -1,5 +1,5 @@
 # ST-CCN-AQI
-## Data Set Partitioning
+#### 4.3.2 Data Set Partitioning
 After determining the input data set of the model, it is necessary to divide the data set. The prediction performance of the model is affected differently by using different proportions of data sets.In order to improve the prediction performance of ST-CCN-IAQI model, this paper divided data sets according to the sequence of training set, verification set and test set. (2:1:1), (3:1:1), (4:1:1), (5:1:1) and (6:1:1) were used as data partitioning strategies to conduct experiments successively, and the optimal partitioning strategy was selected by comparing various performance indicators. The experimental performance is shown in Table 1:
 
 Table 1 : The influence of different partition ratio on prediction performance
@@ -8,8 +8,7 @@ Table 1 : The influence of different partition ratio on prediction performance
 
 As can be seen from the above table, when the data set partition ratio is (5:1:1), the ST-CCN-IAQI model achieves the optimal value of each performance indicator, RMSE is 10.468, MAE is 8.340.As the proportion of training sets increases, the prediction performance of the model is gradually optimized. However, when the proportion of training sets is too large and the proportion of verification sets is too small, it is not conducive to the air quality prediction of ST-CCN-IAQI model.Therefore, the data set partition ratio was set as (5:1:1) for subsequent experiments.
 
-Parameter Tuning
--
+#### 4.3.3 Parameter Tuning
 
 After the above experiments, data selection and data set division have been completed.Next, the hyperparameters of ST-CCN-IAQI model were optimized to improve the prediction accuracy of the model.In the iterative process, the learning rate will control the progress of learning, that is, the step of forward and the speed of gradient descent, thus affecting the prediction effect of the model.In this paper, the learning rate values are set as 0.1, 0.005, 0.001, 0.0005 and 0.0001 for comparative experiments. The experimental results are shown in Table 2:
 
