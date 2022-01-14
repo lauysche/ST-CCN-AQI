@@ -3,8 +3,9 @@
 In this paper, the spatial range optimization method is used to select sites with strong spatial correlation, and the optimal data set is used to divide the data. The parameters such as learning rate, kernel number and data input window are optimized, so as to obtain the model with the best prediction effect and predict IAQIPM2.5 value, IAQIPM10 value and IAQINO2 value.Finally, the prediction performance of the model is compared with that of the benchmark model to draw a conclusion. RMSE, MAE and R2 are used to evaluate the advantages and disadvantages.
 ### 4.1	The data collection
 With the rapid development of science and technology, air quality is being seriously affected by the emission of air pollutants from agriculture, industry, transportation and other activities.As the economic center of China, the current situation of air pollution in Shanghai can not be ignored. Therefore, Shanghai is selected as the research area in this paper, and the distribution of monitoring stations is shown in Fig.4 :
-
+<div align=center>
 ![image](https://github.com/lauysche/ST-CCN-AQI/blob/main/images/github1.png)
+</div>
 
 Figure 4: Distribution of monitoring stations in Shanghai
 
