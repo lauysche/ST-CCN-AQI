@@ -9,6 +9,23 @@ With the rapid development of science and technology, air quality is being serio
 Figure 4: Distribution of monitoring stations in Shanghai
 
 In this paper, hourly air quality data sets were collected from 9 monitoring stations in Shanghai from August 26 to September 28, 2013, including IAQIPM2.5, IAQIPM10, IAQINO2, temperature, pressure, humidity, wind speed and weather.Geographic location information, including longitude and latitude, was obtained for 9 monitoring stations in Shanghai. The data description is Table 1:
+
+![image](https://github.com/lauysche/ST-CCN-AQI/blob/main/images/github2.png)
+
+### 4.2	Data Preprocessing
+In this paper, the data set obtained is preprocessed.For single missing value, first-order Lagrangian linear interpolation (linear interpolation) is adopted. For continuous multiple missing value, data in the same period of time within the adjacent date is used to fill in, making the overall data conform to the change rule. The linear difference formula is as follows:
+
+![image](https://github.com/lauysche/ST-CCN-AQI/blob/main/images/github3.png)
+
+Where (x0,y0),(x1,y1) represents the interpolation of two adjacent nodes, and epresents the inserted missing value.Different features in the dataset have different dimensional and dimensional units. In order to eliminate the dimensional influence between features, comparability between feature indexes is made.The maximum and minimum normalization method is used to limit the data within the range of [-1,1], and eliminate the influence of singular data on air quality prediction.The calculation formula of maximum and minimum normalization is as follows:
+
+![image](https://github.com/lauysche/ST-CCN-AQI/blob/main/images/github4.png)
+
+Where  is the maximum value of a series of features,  is the minimum value of a series of features, and  is the final result.To further understand the data, this paper randomly selected a site as the target site, and conducted statistics and analysis of its data as shown in Table 2:
+
+![image](https://github.com/lauysche/ST-CCN-AQI/blob/main/images/github5.png)
+
+As can be seen from the above table, the maximum value of IAQIPM2.5 at the target site is 181.239 with a mean value of 87.422, and the mean values of IAQIPM10 and IAQINO2 are 44.762 and 18.116, respectively, with a decrease of 48.8% and 79.6% compared with IAQIPM2.5. It can be seen that PM2.5 pollution in Shanghai is serious. PM10 and NO2 pollution is relatively light.In order to improve the air quality of Shanghai, it is urgent to predict IAQI in Shanghai.
 #### 4.3.2 Data Set Partitioning
 After determining the input data set of the model, it is necessary to divide the data set. The prediction performance of the model is affected differently by using different proportions of data sets.In order to improve the prediction performance of ST-CCN-IAQI model, this paper divided data sets according to the sequence of training set, verification set and test set. (2:1:1), (3:1:1), (4:1:1), (5:1:1) and (6:1:1) were used as data partitioning strategies to conduct experiments successively, and the optimal partitioning strategy was selected by comparing various performance indicators. The experimental performance is shown in Table 1:
 
