@@ -31,13 +31,13 @@ As can be seen from the above table, the maximum value of IAQIPM2.5 at the targe
 #### 4.3.1 Spatial Range Selection
 Firstly, the correlation between the target site and other surrounding sites is calculated. Secondly, strong spatial sites are selected.The correlation coefficient and number of sites in different spatial ranges are different, as shown in Figure 5.The selection of spatial range directly affects the selection of input data of the model.In this case, data selection is not representative and comprehensive, leading to poor prediction effect of the model.When the spatial range with small correlation coefficient is selected, the number of stations with large spatial range is too much, and it is easy to introduce the stations with poor correlation, which makes the model prediction inaccurate.It is impossible to extract comprehensive spatial strongly correlated features based on the spatial range selected by individuals.Therefore, this paper uses the violence search method to traverse all spatial ranges including the target site, and determines the optimal spatial range by comparing various performance indicators.
 <div align=center>
-<img src="https://github.com/lauysche/ST-CCN-AQI/blob/main/images/github6.png"/>
+<img src="https://github.com/lauysche/ST-CCN-AQI/blob/main/images/distribution.png"/>
 </div>
 <div align=center>
 Figure 5(a): Spatial distribution of monitoring stations in Shanghai
 </div>
 <div align=center>
-<img src="https://github.com/lauysche/ST-CCN-AQI/blob/main/images/github7.png"/>
+<img src="https://github.com/lauysche/ST-CCN-AQI/blob/main/images/spatial.png"/>
 </div>
 <div align=center>
 Figure 5(b): Zoomed view of spatial distribution
