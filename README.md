@@ -11,7 +11,7 @@ Figure 4: Distribution of monitoring stations in Shanghai
 </div>
 In this paper, hourly air quality data sets were collected from 9 monitoring stations in Shanghai from August 26 to September 28, 2013, including IAQIPM2.5, IAQIPM10, IAQINO2, temperature, pressure, humidity, wind speed and weather.Geographic location information, including longitude and latitude, was obtained for 9 monitoring stations in Shanghai. The data description is Table 1:
 <div align=center>
-![image](https://github.com/lauysche/ST-CCN-AQI/blob/main/images/github2.png)
+<img src="https://github.com/lauysche/ST-CCN-AQI/blob/main/images/github2.png"/>
 </div>
 ### 4.2	Data Preprocessing
 In this paper, the data set obtained is preprocessed.For single missing value, first-order Lagrangian linear interpolation (linear interpolation) is adopted. For continuous multiple missing value, data in the same period of time within the adjacent date is used to fill in, making the overall data conform to the change rule. The linear difference formula is as follows:
