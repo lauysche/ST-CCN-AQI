@@ -4,7 +4,7 @@ In this paper, the spatial range optimization method is used to select sites wit
 ### 4.1	The data collection
 With the rapid development of science and technology, air quality is being seriously affected by the emission of air pollutants from agriculture, industry, transportation and other activities.As the economic center of China, the current situation of air pollution in Shanghai can not be ignored. Therefore, Shanghai is selected as the research area in this paper, and the distribution of monitoring stations is shown in Fig.4 :
 <div align=center>
-![image](https://github.com/lauysche/ST-CCN-AQI/blob/main/images/github1.png)
+<img src="https://github.com/lauysche/ST-CCN-AQI/blob/main/images/github1.png"/>
 </div>
 
 Figure 4: Distribution of monitoring stations in Shanghai
