@@ -1,4 +1,14 @@
 # ST-CCN-AQI
+## 4	Experiments and Results
+In this paper, the spatial range optimization method is used to select sites with strong spatial correlation, and the optimal data set is used to divide the data. The parameters such as learning rate, kernel number and data input window are optimized, so as to obtain the model with the best prediction effect and predict IAQIPM2.5 value, IAQIPM10 value and IAQINO2 value.Finally, the prediction performance of the model is compared with that of the benchmark model to draw a conclusion. RMSE, MAE and R2 are used to evaluate the advantages and disadvantages.
+### 4.1	The data collection
+With the rapid development of science and technology, air quality is being seriously affected by the emission of air pollutants from agriculture, industry, transportation and other activities.As the economic center of China, the current situation of air pollution in Shanghai can not be ignored. Therefore, Shanghai is selected as the research area in this paper, and the distribution of monitoring stations is shown in Fig.4 :
+
+![image](https://github.com/lauysche/ST-CCN-AQI/blob/main/images/github1.png)
+
+Figure 4: Distribution of monitoring stations in Shanghai
+
+In this paper, hourly air quality data sets were collected from 9 monitoring stations in Shanghai from August 26 to September 28, 2013, including IAQIPM2.5, IAQIPM10, IAQINO2, temperature, pressure, humidity, wind speed and weather.Geographic location information, including longitude and latitude, was obtained for 9 monitoring stations in Shanghai. The data description is Table 1:
 #### 4.3.2 Data Set Partitioning
 After determining the input data set of the model, it is necessary to divide the data set. The prediction performance of the model is affected differently by using different proportions of data sets.In order to improve the prediction performance of ST-CCN-IAQI model, this paper divided data sets according to the sequence of training set, verification set and test set. (2:1:1), (3:1:1), (4:1:1), (5:1:1) and (6:1:1) were used as data partitioning strategies to conduct experiments successively, and the optimal partitioning strategy was selected by comparing various performance indicators. The experimental performance is shown in Table 1:
 
