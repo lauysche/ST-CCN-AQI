@@ -42,10 +42,10 @@ Figure 5(a): Spatial distribution of monitoring stations in Shanghai
 <div align=center>
 Figure 5(b): Zoomed view of spatial distribution
 </div>
-The above two pictures are the distribution map and enlarged view of air monitoring stations in Shanghai.Pentagram is the target site randomly selected in this paper, and triangles in different colors represent surrounding sites.In this paper, elliptic dotted lines are used to divide different spatial ranges from near to far according to the distance between surrounding stations and target stations.In this paper, the mean values of correlation coefficients between site and target site in each spatial range are 0.933, 0.915, 0.907.0.906, 0.903, 0.884, 0.88, 0.87 from near to far.As shown in Table 3, the average correlation coefficient represents different spatial ranges to explore the influence of spatial range selection on model prediction performance.
+The above two pictures are the distribution map and enlarged view of air monitoring stations in Shanghai.Pentagram is the target site randomly selected in this paper, and triangles represent surrounding sites.In this paper, elliptic dotted lines are used to divide different spatial ranges from near to far according to the distance between surrounding stations and target stations.In this paper, the mean values of correlation coefficients between site and target site in each spatial range are 0.933, 0.915, 0.907.0.906, 0.903, 0.884, 0.88, 0.87 from near to far.As shown in Table 3, the average correlation coefficient represents different spatial ranges to explore the influence of spatial range selection on model prediction performance.
 The selection of spatial range directly affects the selection of input data of the model.In this case, data selection is not representative and comprehensive, leading to poor prediction effect of the model.When the spatial range with small correlation coefficient is selected, the number of stations with large spatial range is too much, and it is easy to introduce the stations with poor correlation, which makes the model prediction inaccurate.It is impossible to extract comprehensive spatial strongly correlated features based on the spatial range selected by individuals.Therefore, this paper uses the violence search method to traverse all spatial ranges including the target site, and determines the optimal spatial range by comparing various performance indicators.As shown in Table 3, the average correlation coefficient represents different spatial ranges to explore the influence of spatial range selection on model prediction performance.
 <div align=center>
-![image](https://github.com/lauysche/ST-CCN-AQI/blob/main/images/github8.png)
+<img src="https://github.com/lauysche/ST-CCN-AQI/blob/main/images/github8.png"/>
 </div>
 It can be concluded from the above table that when the average correlation coefficient is 0.906, the RMSE and MAE of ST-CCN-IAQI model are 11.806 and 8.511, indicating the best prediction performance of the model.Compared with the spatial range of maximum average correlation coefficient, RMSE and MAE decreased by 12.5% and 15.3% respectively.Therefore, the sites within the spatial range marked in red in the figure above are selected as strong spatial correlation sites as the input of ST-CCN-IAQI model.
 #### 4.3.2 Data Set Partitioning
@@ -54,7 +54,7 @@ After determining the input data set of the model, it is necessary to divide the
 Table 1 : The influence of different partition ratio on prediction performance
 </div>
 <div align=center>
-![image](https://github.com/lauysche/ST-CCN-AQI/blob/main/images/fourth.png)
+<img src="https://github.com/lauysche/ST-CCN-AQI/blob/main/images/fourth.png"/>
 </div>
 As can be seen from the above table, when the data set partition ratio is (5:1:1), the ST-CCN-IAQI model achieves the optimal value of each performance indicator, RMSE is 10.468, MAE is 8.340.As the proportion of training sets increases, the prediction performance of the model is gradually optimized. However, when the proportion of training sets is too large and the proportion of verification sets is too small, it is not conducive to the air quality prediction of ST-CCN-IAQI model.Therefore, the data set partition ratio was set as (5:1:1) for subsequent experiments.
 
@@ -65,17 +65,17 @@ After the above experiments, data selection and data set division have been comp
 Table2: Model predictive performance of different learning rates
 </div>
 <div align=center>
-![image](https://github.com/lauysche/ST-CCN-AQI/blob/main/images/first.png)
+<img src="https://github.com/lauysche/ST-CCN-AQI/blob/main/images/first.png"/>
 </div>
 As can be seen from the above table, the learning rate is 0.001,ST-CCN-IAQI model has the best prediction performance, RMSE and MAE are 11.806 and 8.511 respectively.When the learning rate is large, the length of forward progress increases, leading to inadequate learning, while when the learning rate is small, the gradient decreases and the convergence rate slows down.The size of the kernel provides input for an expansion of convolution convolution in lower layer to the upper network amount of historical data, a data input window value forecast data when the scope of historical data input, the value of these two parameters determine the input to the expansion of convolution model is the data comprehensive site is extracted by precise time correlation characteristics of the data.Therefore, the kernel size was set as 2, 3, 4, 5 and 6, and the data input window range (3~24) were respectively set as comparison experiments, and RMSE and MAE were taken as performance evaluation indexes.Experimental results are shown in Figure 3:
 <div align=center>
-![image](https://github.com/lauysche/ST-CCN-AQI/blob/main/images/second.png)
+<img src="https://github.com/lauysche/ST-CCN-AQI/blob/main/images/second.png"/>
 </div>
 <div align=center>
 Figure 3(a) : Model prediction performance for different kernel sizes
 </div>
 <div align=center>
-![image](https://github.com/lauysche/ST-CCN-AQI/blob/main/images/third.png)
+<img src="https://github.com/lauysche/ST-CCN-AQI/blob/main/images/third.png"/>
 </div>
 <div align=center>
 Figure 3(b) : Model prediction performance of different input window values
