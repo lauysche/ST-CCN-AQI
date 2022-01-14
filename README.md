@@ -16,7 +16,7 @@ In this paper, hourly air quality data sets were collected from 9 monitoring sta
 ### 4.2	Data Preprocessing
 In this paper, the data set obtained is preprocessed.For single missing value, first-order Lagrangian linear interpolation (linear interpolation) is adopted. For continuous multiple missing value, data in the same period of time within the adjacent date is used to fill in, making the overall data conform to the change rule. The linear difference formula is as follows:
 <div align=center>
-![image](https://github.com/lauysche/ST-CCN-AQI/blob/main/images/github3.png)
+<img src="https://github.com/lauysche/ST-CCN-AQI/blob/main/images/github3.png"/>
 </div>
 Where (x0,y0),(x1,y1) represents the interpolation of two adjacent nodes, and epresents the inserted missing value.Different features in the dataset have different dimensional and dimensional units. In order to eliminate the dimensional influence between features, comparability between feature indexes is made.The maximum and minimum normalization method is used to limit the data within the range of [-1,1], and eliminate the influence of singular data on air quality prediction.The calculation formula of maximum and minimum normalization is as follows:
 <div align=center>
