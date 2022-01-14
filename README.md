@@ -34,13 +34,13 @@ Firstly, the correlation between the target site and other surrounding sites is 
 <img src="https://github.com/lauysche/ST-CCN-AQI/blob/main/images/github6.png"/>
 </div>
 <div align=center>
-Figure 5(a): Mean values of correlation coefficients in different spatial ranges
+Figure 5(a): Spatial distribution of monitoring stations in Shanghai
 </div>
 <div align=center>
 <img src="https://github.com/lauysche/ST-CCN-AQI/blob/main/images/github7.png"/>
 </div>
 <div align=center>
-Figure 5(b): Mean values of correlation coefficients in different spatial ranges
+Figure 5(b): Zoomed view of spatial distribution
 </div>
 The above two pictures are the distribution map and enlarged view of air monitoring stations in Shanghai.Pentagram is the target site randomly selected in this paper, and triangles in different colors represent surrounding sites.In this paper, elliptic dotted lines are used to divide different spatial ranges from near to far according to the distance between surrounding stations and target stations.In this paper, the mean values of correlation coefficients between site and target site in each spatial range are 0.933, 0.915, 0.907.0.906, 0.903, 0.884, 0.88, 0.87 from near to far.As shown in Table 3, the average correlation coefficient represents different spatial ranges to explore the influence of spatial range selection on model prediction performance.
 The selection of spatial range directly affects the selection of input data of the model.In this case, data selection is not representative and comprehensive, leading to poor prediction effect of the model.When the spatial range with small correlation coefficient is selected, the number of stations with large spatial range is too much, and it is easy to introduce the stations with poor correlation, which makes the model prediction inaccurate.It is impossible to extract comprehensive spatial strongly correlated features based on the spatial range selected by individuals.Therefore, this paper uses the violence search method to traverse all spatial ranges including the target site, and determines the optimal spatial range by comparing various performance indicators.As shown in Table 3, the average correlation coefficient represents different spatial ranges to explore the influence of spatial range selection on model prediction performance.
