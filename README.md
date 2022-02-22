@@ -13,7 +13,9 @@ In this paper, hourly air quality data sets were collected from 9 monitoring sta
 <div align=center>
 <img src="https://github.com/lauysche/ST-CCN-AQI/blob/main/images/github2.png"/>
 </div>
+
 ### 4.2	Data Preprocessing
+
 In this paper, the data set obtained is preprocessed.For single missing value, first-order Lagrangian linear interpolation (linear interpolation) is adopted. For continuous multiple missing value, data in the same period of time within the adjacent date is used to fill in, making the overall data conform to the change rule. The linear difference formula is as follows:
 <div align=center>
 <img src="https://github.com/lauysche/ST-CCN-AQI/blob/main/images/github3.png"/>
@@ -27,8 +29,11 @@ Where  is the maximum value of a series of features,  is the minimum value of a 
 <img src="https://github.com/lauysche/ST-CCN-AQI/blob/main/images/github5.png"/>
 </div>
 As can be seen from the above table, the maximum value of IAQIPM2.5 at the target site is 181.239 with a mean value of 87.422, and the mean values of IAQIPM10 and IAQINO2 are 44.762 and 18.116, respectively, with a decrease of 48.8% and 79.6% compared with IAQIPM2.5. It can be seen that PM2.5 pollution in Shanghai is serious. PM10 and NO2 pollution is relatively light.In order to improve the air quality of Shanghai, it is urgent to predict IAQI in Shanghai.
+
 ### 4.3	The Experimental Setup
+
 #### 4.3.1 Spatial Range Selection
+
 Firstly, the correlation between the target site and other surrounding sites is calculated. Secondly, strong spatial sites are selected.The correlation coefficient and number of sites in different spatial ranges are different, as shown in Figure 5.The selection of spatial range directly affects the selection of input data of the model.In this case, data selection is not representative and comprehensive, leading to poor prediction effect of the model.When the spatial range with small correlation coefficient is selected, the number of stations with large spatial range is too much, and it is easy to introduce the stations with poor correlation, which makes the model prediction inaccurate.It is impossible to extract comprehensive spatial strongly correlated features based on the spatial range selected by individuals.Therefore, this paper uses the violence search method to traverse all spatial ranges including the target site, and determines the optimal spatial range by comparing various performance indicators.
 <div align=center>
 <img src="https://github.com/lauysche/ST-CCN-AQI/blob/main/images/distribution.png"/>
@@ -48,7 +53,9 @@ The selection of spatial range directly affects the selection of input data of t
 <img src="https://github.com/lauysche/ST-CCN-AQI/blob/main/images/github8.png"/>
 </div>
 It can be concluded from the above table that when the average correlation coefficient is 0.906, the RMSE and MAE of ST-CCN-IAQI model are 11.806 and 8.511, indicating the best prediction performance of the model.Compared with the spatial range of maximum average correlation coefficient, RMSE and MAE decreased by 12.5% and 15.3% respectively.Therefore, the sites within the spatial range marked in red in the figure above are selected as strong spatial correlation sites as the input of ST-CCN-IAQI model.
+
 #### 4.3.2 Data Set Partitioning
+
 After determining the input data set of the model, it is necessary to divide the data set. The prediction performance of the model is affected differently by using different proportions of data sets.In order to improve the prediction performance of ST-CCN-IAQI model, this paper divided data sets according to the sequence of training set, verification set and test set. (2:1:1), (3:1:1), (4:1:1), (5:1:1) and (6:1:1) were used as data partitioning strategies to conduct experiments successively, and the optimal partitioning strategy was selected by comparing various performance indicators. The experimental performance is shown in Table 1:
 <div align=center>
 Table 1 : The influence of different partition ratio on prediction performance
